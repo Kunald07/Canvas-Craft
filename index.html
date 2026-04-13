@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CanvasCraft – Visual Design Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="app-header">
+        <div>Canvas-<span>Craft</span></div>
+        <div id="status-msg">Ready</div>
+        <button class="primary" id="save-btn">SAVE PROJECT</button>
+    </header>
+
+    <div class="app-body">
+
+        <aside class="sidebar">
+            <div class="section-title">Toolbox</div>
+            <div class="tool-group">
+                <button id="add-rect">Rectangle</button>
+                <button id="add-text">Text Box</button>
+            </div>
+
+            <div class="section-title">Options</div>
+            <div class="prop-row">
+                <span>Snap to Grid</span>
+                <input type="checkbox" id="snap-toggle">
+            </div>
+
+            <div class="section-title">Layers</div>
+            <div id="layers-list"></div>
+
+            <div class="sidebar-bottom ">
+                <div class="section-title" style="padding: 0 0 8px 0;">Export Design</div>
+                <div class="sidebar-bottom-buttons">
+                    <button id="export-json">JSON</button>
+                    <button id="export-html">HTML</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="workspace">
+            <div id="canvas">
+                <!-- Elements will appear here -->
+            </div>
+        </main>
+
+        <aside class="sidebar sidebar-right">
+            <div class="section-title">Properties</div>
+            <div id="properties-panel">
+                <p>
+                    Select an element to edit properties
+                </p>
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
